@@ -4,7 +4,7 @@ const http = require('http');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
-const PORT = process.env.PORT || 7777;
+const PORT = process.env.PORT || 5000;
 
 const router = require('./router');
 
@@ -63,4 +63,4 @@ io.on('connection', (socket) => {
 
 app.use(router);
 
-server.listen(app.get('port'), () => console.log(`Server has started on port ${PORT}`));
+server.listen(PORT, () => console.log(`Server has started on port ${PORT}`));

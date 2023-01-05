@@ -18,6 +18,7 @@ const io = socketio(server, {
     allowedHeaders: ['my-custom-header'],
     credentials: true,
   },
+  allowEIO3: true,
 });
 
 io.on('connection', (socket) => {

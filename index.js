@@ -62,7 +62,10 @@ io.on('connection', (socket) => {
   });
 });
 
-app.use(cors());
+app.use(cors({
+  origin: "https://narioalvin.github.io/react-cheez-meez",
+}));
+
 app.use(router);
 
 server.listen(PORT, () => console.log(`Server has started on port ${PORT}`));

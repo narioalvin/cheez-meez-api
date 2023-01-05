@@ -63,7 +63,7 @@ io.on('connection', (socket) => {
 });
 
 app.use(cors({
-  origin: "https://narioalvin.github.io/react-cheez-meez",
+  origin: "https://narioalvin.github.io/react-cheez-meez/*",
 }));
 
 app.use(router);

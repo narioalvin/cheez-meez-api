@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 5001;
 const router = require('./router');
 
 const app = express();
+app.use(cors());
+
 const server = http.createServer(app);
 const io = socketio(server);
 
@@ -61,10 +63,6 @@ io.on('connection', (socket) => {
     }
   });
 });
-
-app.use(cors({
-  origin: "https://narioalvin.github.io",
-}));
 
 app.use(router);
 
